@@ -6,14 +6,42 @@
         body {
             background-color: hotpink;
         }
+
+        button.emotion {
+            background-color: pink;
+            border-radius: 75%;
+            border-color: darkmagenta;
+        }
     </style>
 </head>
 
 <body style="text-align:center;">
-    <h1>Burn Book</h1>
-    <div style="margin-top: 75%;">
-        <button> OPEN </button>
+    <div id="scene_1" style="display:none;">
+        <h1>Burn Book</h1>
+        <div style="margin-top: 75%;">
+            <button> OPEN </button>
+        </div>
     </div>
-  
+
+    <div id="scene_2">
+        <div style="background-color: bisque; width: 1024px; height: 600px; margin: auto; margin-top: 15%;">
+            
+            <div style="display: inline-block; width: 49%;">
+                <div style="margin-top: 50px; margin-left: 0px;">
+                    <button class="emotion" id="angry">ANGRY</button>
+                    <button class="emotion" id="disgust">DISGUSTED</button>
+                    <button class="emotion" id="sad">SAD</button>
+                </div>
+                <div style="margin-top: 50px; margin-left: 0px;">
+                    <button class="emotion" id="fetch">FETCH</button>
+                    <button class="emotion" id="jealous">JEALOUS</button>
+                    <button class="emotion" id="love">LOVE</button>
+                </div>
+            </div>
+            <div style="background-color: black; width: 5px; height: 600px; display: inline-block;"></div>
+        </div>
+        
+
+    </div>
 </body>
 </html>
