@@ -13,6 +13,143 @@
             border-color: darkmagenta;
         }
     </style>
+    
+    <script>
+        /*
+        function clickButtonTextBox(){
+            // person appears
+            document.getElementById("textbox").style.display = 'inline-block';
+            //type.style.display ='block'; 
+        }
+
+        function fireMove(){
+
+        }*/
+        /*var disgustButton = document.getElementById('disgustID');
+        var disgust = document.getElementById('disgust-img');
+
+
+        var sadButton = document.getElementById('sadID');
+        var sad = document.getElementById('sad-img');
+
+
+        var fetchButton = document.getElementById('fetchId');
+        var fetched = document.getElementById('fetch-img');
+
+
+        var jealousButton = document.getElementById('jealousID');
+        var jealous = document.getElementById('jealous-img');
+
+
+        var angryButton = document.getElementById('angryID');
+        var angry = document.getElementById('angry-img');
+
+
+        var loveButton = document.getElementById('loveID');
+        var love = document.getElementById('love-img');
+
+
+
+
+        var textBox = document.getElementById('textbox');
+        var message = document.getElementById('initial-text');
+        var reactionSpeech = document.getElementById('reaction-text');
+        */
+        //var fireOne = document.getElementById('');
+        //var fireTwo = document.getElementById('');
+
+        function clickDisgust(){
+        document.getElementById('disgust-img').style.display = 'block';
+        document.getElementById('loveID').style.display = 'none';
+        document.getElementById('angryID').style.display = 'none';
+        document.getElementById('jealousID').style.display = 'none';
+        document.getElementById('fetchID').style.display = 'none';
+        document.getElementById('sadID').style.display = 'none';
+        document.getElementById('disgustID').style.display = 'none';
+        document.getElementById('reaction-text').innerHTML = "Ew, seriously? Whatever happend to you has to be so beyond gross. Tell me all about it... ";
+        document.getElementById('reaction-text').style.display = 'block';
+        document.getElementById("textbox").style.display = 'inline-block';
+        document.getElementById('initial-text').style.display = 'none';
+        }
+
+
+        function clickSad(){
+        document.getElementById('sad-img').style.display = 'block';
+        document.getElementById('loveID').style.display = 'none';
+        document.getElementById('angryID').style.display = 'none';
+        document.getElementById('jealousID').style.display = 'none';
+        document.getElementById('fetchID').style.display = 'none';
+        document.getElementById('sadID').style.display = 'none';
+        document.getElementById('disgustID').style.display = 'none';
+        document.getElementById('reaction-text').innerHTML = "Oh my gosh, that's like, totally heartbreaking that you feel that way. Why does life have to be so, like, unfair sometimes? Tell me all about it...";
+        document.getElementById('reaction-text').style.display = 'block';
+        document.getElementById("textbox").style.display = 'inline-block';
+        document.getElementById('initial-text').style.display = 'none';
+        }
+
+
+        function clickFetch(){
+        document.getElementById('fetch-img').style.display = 'block';
+        document.getElementById('loveID').style.display = 'none';
+        document.getElementById('angryID').style.display = 'none';
+        document.getElementById('jealousID').style.display = 'none';
+        document.getElementById('fetchID').style.display = 'none';
+        document.getElementById('sadID').style.display = 'none';
+        document.getElementById('disgustID').style.display = 'none';
+        document.getElementById('reaction-text').innerHTML = "Oh my gosh, stop. I'm seriously like so happy for you! Tell me all about it...";
+        document.getElementById('reaction-text').style.display = 'block';
+        document.getElementById("textbox").style.display = 'inline-block';
+        document.getElementById('initial-text').style.display = 'none';
+        }
+
+
+        function clickJealous(){
+        document.getElementById('jealous-img').style.display = 'block';
+        document.getElementById('loveID').style.display = 'none';
+        document.getElementById('angryID').style.display = 'none';
+        document.getElementById('jealousID').style.display = 'none';
+        document.getElementById('fetchID').style.display = 'none';
+        document.getElementById('sadID').style.display = 'none';
+        document.getElementById('disgustID').style.display = 'none';
+        document.getElementById('reaction-text').innerHTML = "Okay spill!! Who are we sabatoging next?? Tell me all about it...";
+        document.getElementById('reaction-text').style.display = 'block';
+        document.getElementById("textbox").style.display = 'inline-block';
+        document.getElementById('initial-text').style.display = 'none';
+        }
+
+
+        function clickAngry(){
+        document.getElementById('angry-img').style.display = 'block';
+        document.getElementById('loveID').style.display = 'none';
+        document.getElementById('angryID').style.display = 'none';
+        document.getElementById('jealousID').style.display = 'none';
+        document.getElementById('fetchID').style.display = 'none';
+        document.getElementById('sadID').style.display = 'none';
+        document.getElementById('disgustID').style.display = 'none';
+        document.getElementById('reaction-text').innerHTML = "UGH! I totally get it. My mom's been bit**ing at me ALL day! Tell me all about it...btw i love your shoes!! where did you get them :)";
+        document.getElementById('reaction-text').style.display = 'block';
+        document.getElementById("textbox").style.display = 'inline-block';
+        document.getElementById('initial-text').style.display = 'none';
+        }
+
+
+        function clickLove(){
+        document.getElementById('love-img').style.display = 'block';
+        document.getElementById('loveID').style.display = 'none';
+        document.getElementById('angryID').style.display = 'none';
+        document.getElementById('jealousID').style.display = 'none';
+        document.getElementById('fetchID').style.display = 'none';
+        document.getElementById('sadID').style.display = 'none';
+        document.getElementById('disgustID').style.display = 'none';
+        document.getElementById('reaction-text').innerHTML = "Oh my gosh, you're, like, totally in love? WHO WHEN WHAT WHERE HOW?!?!? tell me everything... ;)";
+        document.getElementById('reaction-text').style.display = 'block';
+        document.getElementById("textbox").style.display = 'inline-block';
+        document.getElementById('initial-text').style.display = 'none';
+        }
+
+
+
+    </script>
 </head>
 
 <body style="text-align:center;">
@@ -24,24 +161,41 @@
     </div>
 
     <div id="scene_2">
-        <div style="background-color: bisque; width: 1024px; height: 600px; margin: auto; margin-top: 15%;">
-            
-            <div style="display: inline-block; width: 49%;">
+        <div style="width: 1024px; height: 600px; margin: auto; margin-top: 15%; position: relative;">
+            <img src="notebook paper.png" style="width: 1024; height: 600px; margin:auto; border: 0px;">
+            <div style="display: inline-block; width: 49%; position: absolute; top: 50px; left: 15px;">
                 <div style="margin-top: 50px; margin-left: 0px;">
-                    <button class="emotion" id="angry">ANGRY</button>
-                    <button class="emotion" id="disgust">DISGUSTED</button>
-                    <button class="emotion" id="sad">SAD</button>
+                    <button class="emotion" id="angryID" onclick="clickAngry()" style="display: inline-block; font-family: Comic Sans MS; font-weight: bold; height: 30px; width: 100px; margin-right: 15px;">ANGRY</button>
+                    <button class="emotion" id="disgustID" onclick="clickDisgust()" style="display: inline-block; font-family: Comic Sans MS; font-weight: bold; height: 30px; width: 100px; margin-right: 15px;">DISGUSTED</button>
+                    <button class="emotion" id="sadID" onclick="clickSad()" style="display: inline-block; font-family: Comic Sans MS; font-weight: bold; height: 30px; width: 100px;">SAD</button>
                 </div>
                 <div style="margin-top: 50px; margin-left: 0px;">
-                    <button class="emotion" id="fetch">FETCH</button>
-                    <button class="emotion" id="jealous">JEALOUS</button>
-                    <button class="emotion" id="love">LOVE</button>
+                    <button class="emotion" id="fetchID" onclick="clickFetch()" style="display: inline-block; font-family: Comic Sans MS; font-weight: bold; height: 30px; width: 100px; margin-right: 15px;">FETCH</button>
+                    <button class="emotion" id="jealousID" onclick="clickJealous()" style="display: inline-block; font-family: Comic Sans MS; font-weight: bold; height: 30px; width: 100px; margin-right: 15px;">JEALOUS</button>
+                    <button class="emotion" id="loveID" onclick="clickLove()" style="display: inline-block; font-family: Comic Sans MS; font-weight: bold; height: 30px; width: 100px;">LOVE</button>
+                </div>
+                <div style="margin-top: 50px; margin-left: 0px;">
+                    <p id="initial-text" style="display: block; font-family: Comic Sans MS; font-weight: bold; font-size: 40px;">How are you feeling today bi***?</p>
+                    <p id="reaction-text" style="display: none; font-family: Comic Sans MS; font-weight: bold; font-size: 20px; margin-top: 35px; margin-left: 215px; width: 250px;">placeholder text omg like so cool i love techy stuff</p>
+                </div>
+                <div>
+                    <img id="angry-img" src="IMG_9665.png" style="display: none; width: 45%; height: 45%; margin-top: -13px; margin-left: 50px;">
+                    <img id="disgust-img" src="PNG image (3).png" style="display: none; width: 30%; height: 30%; margin-top: -28px; margin-left: 50px;">
+                    <img id="fetch-img" src="PNG image (2).png" style="display: none; width: 35%; height: 35%; margin-top: -20px; margin-left: 50px;">
+                    <img id="sad-img" src="PNG image (1).png" style="display: none; width: 35%; height: 35%; margin-top: -10px; margin-left: 50px;">
+                    <img id="jealous-img" src="PNG image.png" style="display: none; width: 80%; height: 80%; margin-top: 118px; margin-left: 15px;">
+                    <img id="love-img" src="PNG image (4).png" style="display: none; width: 45%; height: 45%; margin-top: 23px; margin-left: 50px;">
                 </div>
             </div>
-            <div style="background-color: black; width: 5px; height: 600px; display: inline-block;"></div>
+            <div style="display: inline-block; width: 49%; margin-top: 50px; position: absolute; top: 10px; left: 500px;">
+                <textarea id="textbox" style="display: none; background-color: whitesmoke; width: 412px; height: 500px; margin-bottom: 50p; border-width: 2px; border-color: darkmagenta;" rows="32" cols="80" placeholder="Write to your heart's content..."></textarea>
+            </div>
         </div>
-        
+        <div style="display: block; margin-left: auto; margin-right: auto; margin-top: 50px;">
+            <button id="burn" style="background-color: orange; font-family: Comic Sans MS; font-weight: bold; font-size: 40px; color: orangered; border-color: orangered; width: 250px; height: 75px; border-radius: 50%;">BURN</button>
+        </div>
 
     </div>
 </body>
 </html>
+
