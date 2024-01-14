@@ -253,22 +253,23 @@
 </head>
 
 <body style="text-align:center; overflow: hidden;">
-    <audio id="music" src="assets/music.mp3">
-        <embed loop="true" autostart="true" hidden="true">
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+        <!--<embed loop="true" autostart="true" hidden="true">-->
     </audio>
     <div id="scene_1" style="display: block; position: relative;">
         <div style="display: inline-block; width: 30%; position: absolute; top: 300px; left: 15%;">
             <p class="text" style="font-size: 50px; color: #770144;">Click on the book to begin...<br> I wanna hear all your thoughts</p>
         </div>
         <div style="display: inline-block; margin-top: 10%; margin-left: 300px; position: absolute; top: 100%; left: 40%;">
-            <button id="book-button" onclick="bookButton()" style="appearance: none; border: none; background-color: lightpink;"><img src="assets/burn-book-cover.png" style="height: 120%; width: 120%;"></button>
+            <button id="book-button" onclick="bookButton()" style="appearance: none; border: none; background-color: lightpink;"><img src="burn-book-cover.png" style="height: 120%; width: 120%;"></button>
         </div>
         
     </div>
 
     <div id="scene_2" style="display: none;">
         <div style="width: 1024px; height: 600px; margin: auto; margin-top: 10%; position: relative;">
-            <img src="assets/rules-page.jpg" style="width: 1024; height: 600px; margin: auto; border: 0px;">
+            <img src="rules-page.jpg" style="width: 1024; height: 600px; margin: auto; border: 0px;">
             <div style="display: inline-block; width: 30%; position: absolute; top: 120px; left: 600px;">
                 <p class="text" style="font-size: 40px; color: #770144;">Are you willing to abide by the rules?</p>
                 <button class="rules" id="rules-button" onclick="startButton()">YES</button>
@@ -278,7 +279,7 @@
 
     <div id="scene_3" style="display: none;">
         <div style="width: 1024px; height: 600px; margin: auto; margin-top: 10%; position: relative;">
-            <img src="assets/notebook paper.png" style="width: 1024; height: 600px; margin:auto; border: 0px;">
+            <img src="notebook paper.png" style="width: 1024; height: 600px; margin:auto; border: 0px;">
             <div style="display: inline-block; width: 49%; position: absolute; top: 50px; left: 15px;">
                 <div class="button-div">
                     <button class="emotion" id="angryID" onclick="clickAngry()" style="margin-right: 15px;">ANGRY</button>
@@ -295,12 +296,12 @@
                     <p class="text" id="reaction-text" style="display: none; font-size: 20px; margin-top: 35px; margin-left: 215px; width: 250px;">placeholder text omg like so cool i love techy stuff</p>
                 </div>
                 <div>
-                    <img id="angry-img" src="assets/angry.png" style="display: none; width: 45%; height: 45%; margin-top: -125px; margin-left: 50px;">
-                    <img id="disgust-img" src="assets/disgust.png" style="display: none; width: 30%; height: 30%; margin-top: -85px; margin-left: 50px;">
-                    <img id="sad-img" src="assets/love.png" style="display: none; width: 35%; height: 35%; margin-top: -151px; margin-left: 50px;">
-                    <img id="fetch-img" src="assets/fetch.png" style="display: none; width: 35%; height: 35%; margin-top: -77px; margin-left: 50px;">
-                    <img id="jealous-img" src="assets/jealous.png" style="display: none; width: 80%; height: 80%; margin-top: 90px; margin-left: 15px;">
-                    <img id="love-img" src="assets/sad.png" style="display: none; width: 45%; height: 45%; margin-top: -81px; margin-left: 16px;">
+                    <img id="angry-img" src="angry.png" style="display: none; width: 45%; height: 45%; margin-top: -125px; margin-left: 50px;">
+                    <img id="disgust-img" src="disgust.png" style="display: none; width: 30%; height: 30%; margin-top: -85px; margin-left: 50px;">
+                    <img id="sad-img" src="love.png" style="display: none; width: 35%; height: 35%; margin-top: -151px; margin-left: 50px;">
+                    <img id="fetch-img" src="fetch.png" style="display: none; width: 35%; height: 35%; margin-top: -77px; margin-left: 50px;">
+                    <img id="jealous-img" src="jealous.png" style="display: none; width: 80%; height: 80%; margin-top: 90px; margin-left: 15px;">
+                    <img id="love-img" src="sad.png" style="display: none; width: 45%; height: 45%; margin-top: -81px; margin-left: 16px;">
                 </div>
             </div>
             <div style="display: inline-block; width: 49%; margin-top: 50px; position: absolute; top: 10px; left: 500px;">
@@ -308,7 +309,7 @@
             </div>
             
             <div id="fire" style="display: none; position: absolute; top: 1000px; margin-left: -500px; ">
-                <img src="assets/fire.png">
+                <img src="fire.png">
             </div>
         </div>
         <div id="burn-div" style="display: none; margin-left: auto; margin-right: auto; margin-top: 50px;">
