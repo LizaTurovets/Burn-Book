@@ -66,21 +66,79 @@
 
     </style>
     <script>
-        
+        /*
+        function clickButtonTextBox(){
+            // person appears
+            document.getElementById("textbox").style.display = 'inline-block';
+            //type.style.display ='block'; 
+        }
+
+        function fireMove(){
+
+        }*/
+        /*var disgustButton = document.getElementById('disgustID');
+        var disgust = document.getElementById('disgust-img');
+
+
+        var sadButton = document.getElementById('sadID');
+        var sad = document.getElementById('sad-img');
+
+
+        var fetchButton = document.getElementById('fetchId');
+        var fetched = document.getElementById('fetch-img');
+
+
+        var jealousButton = document.getElementById('jealousID');
+        var jealous = document.getElementById('jealous-img');
+
+
+        var angryButton = document.getElementById('angryID');
+        var angry = document.getElementById('angry-img');
+
+
+        var loveButton = document.getElementById('loveID');
+        var love = document.getElementById('love-img');
+
+
+
+
+        var textBox = document.getElementById('textbox');
+        var message = document.getElementById('initial-text');
+        var reactionSpeech = document.getElementById('reaction-text');
+        */
+        //var fireOne = document.getElementById('');
+        //var fireTwo = document.getElementById(''); 
+
+        /*window.addEventListener("load", event => {
+        const audio = document.getElementById('music');
+        //audio.volume = 100;
+        audio.play(); 
+        })*/
+
         // scene changes
         function bookButton(){
+        audio = document.getElementById('click');
+        audio.play();
         document.getElementById('scene_1').style.display = 'none';
         document.getElementById('scene_2').style.display = 'block';
+        audio = document.getElementById('music');
+        audio.play();
         }
 
 
         function startButton(){
+        audio = document.getElementById('click');
+        audio.play();
         document.getElementById('scene_2').style.display = 'none';
         document.getElementById('scene_3').style.display = 'block';
         }
 
 
         function returnHome(){
+        audio = document.getElementById('click');
+        audio.play();
+        audio = document.getElementById('flame');
+        audio.pause();
         document.getElementById("scene_3").style.display = 'none';
         document.getElementById("scene_1").style.display = 'block';
         document.getElementById('returnID').style.display = "none";
@@ -113,6 +171,8 @@
 
         // removes emotion buttons from screen
         function removeEmotions(){
+        audio = document.getElementById('click');
+        audio.play();
         document.getElementById('loveID').style.display = 'none';
         document.getElementById('angryID').style.display = 'none';
         document.getElementById('jealousID').style.display = 'none';
@@ -184,6 +244,7 @@
         var ySpeed = 20;
 
         function burn(){
+        
         var fire = document.getElementById('fire');
         fire.style.display = 'block';
 
@@ -199,16 +260,28 @@
         document.getElementById('textbox').value = '';
         document.getElementById('returnID').style.display = "block";
         }
+
+        function burnSound(){
+            audio = document.getElementById('flame');
+            audio.play();
+        }
         
 
     </script>
 </head>
 
 <body style="text-align:center; overflow: hidden;">
-    <audio autoplay loop>
+    <audio id="music" loop>
         <source src="music.mp3" type="audio/mp3">
-        <!--<embed loop="true" autostart="true" hidden="true">-->
     </audio>
+    <audio id="click">
+        <source src="click.mp3" type="audio/mp3">
+    </audio>
+    <audio id="flame" loop>
+        <source src="flame.mp3" type="audio/mp3">
+    </audio>
+
+
     <div id="scene_1" style="display: block; position: relative;">
         <div style="display: inline-block; width: 30%; position: absolute; top: 300px; left: 15%;">
             <p class="text" style="font-size: 50px; color: #770144;">Click on the book to begin...<br> I wanna hear all your thoughts</p>
@@ -265,7 +338,7 @@
             </div>
         </div>
         <div id="burn-div" style="display: none; margin-left: auto; margin-right: auto; margin-top: 50px;">
-            <button class="burn" id="burn" onclick="requestAnimationFrame(burn);">BURN</button>
+            <button class="burn" id="burn" onclick="requestAnimationFrame(burn); burnSound();">BURN</button>
         </div>
         <div style="margin-left: 700px; margin-top: -300px; position: absolute;">
             <button id="returnID" class="burn" onclick="returnHome()" style="display: none;">RETURN</button>
