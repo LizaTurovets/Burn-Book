@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html class="cursor">
 <head>
     <title> Page Title </title>
     <style> 
+        .cursor {
+            cursor: url('cursor.png'), pointer;
+        }
+
         body {
             background-color: lightpink;
+            
         }
 
         button.emotion {
@@ -114,8 +119,11 @@
         //audio.volume = 100;
         audio.play(); 
         })*/
-
+        //document.body.style.cursor = cursors.png;
         // scene changes
+        //document.getElementsByTagName("body")[0].style.cursor = "cursor.png";
+
+
         function bookButton(){
         audio = document.getElementById('click');
         audio.play();
@@ -270,7 +278,7 @@
     </script>
 </head>
 
-<body style="text-align:center; overflow: hidden;">
+<body  style="text-align:center; overflow: hidden;">
     <audio id="music" loop>
         <source src="music.mp3" type="audio/mp3">
     </audio>
@@ -287,7 +295,7 @@
             <p class="text" style="font-size: 50px; color: #770144;">Click on the book to begin...<br> I wanna hear all your thoughts</p>
         </div>
         <div style="display: inline-block; margin-top: 10%; margin-left: 300px; position: absolute; top: 100%; left: 40%;">
-            <button id="book-button" onclick="bookButton()" style="appearance: none; border: none; background-color: lightpink;"><img src="burn-book-cover.png" style="height: 120%; width: 120%;"></button>
+            <button class="cursor" id="book-button" onclick="bookButton()" style="appearance: none; border: none; background-color: lightpink;"><img src="burn-book-cover.png" style="height: 120%; width: 120%;"></button>
         </div>
         
     </div>
@@ -297,7 +305,7 @@
             <img src="rules-page.jpg" style="width: 1024; height: 600px; margin: auto; border: 0px;">
             <div style="display: inline-block; width: 30%; position: absolute; top: 120px; left: 600px;">
                 <p class="text" style="font-size: 40px; color: #770144;">Are you willing to abide by the rules?</p>
-                <button class="rules" id="rules-button" onclick="startButton()">YES</button>
+                <button class="rules cursor" id="rules-button" onclick="startButton()">YES</button>
             </div>
         </div>
     </div>
@@ -307,14 +315,14 @@
             <img src="notebook paper.png" style="width: 1024; height: 600px; margin:auto; border: 0px;">
             <div style="display: inline-block; width: 49%; position: absolute; top: 50px; left: 15px;">
                 <div class="button-div">
-                    <button class="emotion" id="angryID" onclick="clickAngry()" style="margin-right: 15px;">ANGRY</button>
-                    <button class="emotion" id="disgustID" onclick="clickDisgust()" style="margin-right: 15px;">DISGUSTED</button>
-                    <button class="emotion" id="sadID" onclick="clickSad()">SAD</button>
+                    <button class="emotion cursor" id="angryID" onclick="clickAngry()" style="margin-right: 15px;">ANGRY</button>
+                    <button class="emotion cursor" id="disgustID" onclick="clickDisgust()" style="margin-right: 15px;">DISGUSTED</button>
+                    <button class="emotion cursor" id="sadID" onclick="clickSad()">SAD</button>
                 </div>
                 <div class="button-div">
-                    <button class="emotion" id="fetchID" onclick="clickFetch()" style="margin-right: 15px;">FETCH</button>
-                    <button class="emotion" id="jealousID" onclick="clickJealous()" style="margin-right: 15px;">JEALOUS</button>
-                    <button class="emotion" id="loveID" onclick="clickLove()">LOVE</button>
+                    <button class="emotion cursor" id="fetchID" onclick="clickFetch()" style="margin-right: 15px;">FETCH</button>
+                    <button class="emotion cursor" id="jealousID" onclick="clickJealous()" style="margin-right: 15px;">JEALOUS</button>
+                    <button class="emotion cursor" id="loveID" onclick="clickLove()">LOVE</button>
                 </div>
                 <div style="margin-top: 50px; margin-left: 0px;">
                     <p class="text" id="initial-text" style="display: block; font-size: 40px;">How are you feeling today bi***?</p>
@@ -330,7 +338,7 @@
                 </div>
             </div>
             <div style="display: inline-block; width: 49%; margin-top: 50px; position: absolute; top: 10px; left: 500px;">
-                <textarea class="textbox" id="textbox" rows="32" cols="80" placeholder="Write to your heart's content..."></textarea>
+                <textarea class="textbox" id="textbox" rows="32" cols="80" placeholder="Write to your heart's content..." style="font-family: Comic Sans MS; font-weight: bold; font-size: 20px; color: hotpink;"></textarea>
             </div>
             
             <div id="fire" style="display: none; position: absolute; top: 1000px; margin-left: -500px; ">
@@ -338,10 +346,10 @@
             </div>
         </div>
         <div id="burn-div" style="display: none; margin-left: auto; margin-right: auto; margin-top: 50px;">
-            <button class="burn" id="burn" onclick="requestAnimationFrame(burn); burnSound();">BURN</button>
+            <button class="burn cursor" id="burn" onclick="requestAnimationFrame(burn); burnSound();">BURN</button>
         </div>
         <div style="margin-left: 700px; margin-top: -300px; position: absolute;">
-            <button id="returnID" class="burn" onclick="returnHome()" style="display: none;">RETURN</button>
+            <button id="returnID" class="burn cursor" onclick="returnHome()" style="display: none;">RETURN</button>
         </div>
         
     </div>
